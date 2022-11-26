@@ -7,7 +7,7 @@
 		<listener
 			class-name="listeners.InvokedListener" />
 		<listener
-			class-name="listeners.RetryFailedTestCases" />
+			class-name="listeners.RetryListenerClass" />
 	</listeners>
 
 	<test thread-count="1" name="Test">
