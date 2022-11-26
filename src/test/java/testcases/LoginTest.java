@@ -14,7 +14,7 @@ public class LoginTest extends LoginPage {
 		// Get user and pass
 		String email = getProperty("username");
 		String password = getProperty("password");
-		// Login
+		// Login to the page
 		loginFlipkart(email, password);
 	}
 }
