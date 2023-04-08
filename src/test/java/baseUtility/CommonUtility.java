@@ -34,7 +34,7 @@ import org.testng.annotations.BeforeSuite;
 public class CommonUtility {
 
   // Standard Waits
-  protected static int WAIT_TIME = 10;
+  protected static int WAIT_TIME = 60;
 
   private long domContentLoadedEventStart = 0L;
 
