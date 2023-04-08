@@ -24,7 +24,8 @@ public class PageClass extends CommonUtility {
   protected String productSearchBtn = "//input[@id='nav-search-submit-button']";
   String categoryDropdown = "//select[@id='searchDropdownBox']";
   String categoryDropdownFF = "(//div[@class='nav-left'])[2]";
-  String categoryDropdownOptFF = "//div[@class='nav-search-scope nav-sprite']/select/option[text()='%s']";
+  String categoryDropdownOptFF =
+      "//div[@class='nav-search-scope nav-sprite']/select/option[text()='%s']";
   String minPriceFilterFld = "//input[@id='low-price']";
   String maxPriceFilterFld = "//input[@id='high-price']";
   String priceFilterApplyBtn = "//input[@class='a-button-input']";
@@ -73,16 +74,16 @@ public class PageClass extends CommonUtility {
     waitForPageToLoad();
     writeToConsole("INFO", "Selected category: " + text);
   }
-  
+
   public void selectCategoryFF(String text) {
-	    waitForPageToLoad();
-	    WebElement drpdwn = driver.findElement(By.xpath(categoryDropdownFF));
-	    clickOn(drpdwn);
-	    WebElement drpdwnOpt = driver.findElement(By.xpath(String.format(categoryDropdownOptFF, text)));
-	    clickOn(drpdwnOpt);
-	    waitForPageToLoad(); 
-	    writeToConsole("INFO", "Selected category: " + text);
-	  }
+    waitForPageToLoad();
+    WebElement drpdwn = driver.findElement(By.xpath(categoryDropdownFF));
+    clickOn(drpdwn);
+    WebElement drpdwnOpt = driver.findElement(By.xpath(String.format(categoryDropdownOptFF, text)));
+    clickOn(drpdwnOpt);
+    waitForPageToLoad();
+    writeToConsole("INFO", "Selected category: " + text);
+  }
 
   public void applyPriceFilter(int minValue, int maxValue) {
     typeIn(minPriceFilterFld, String.valueOf(minValue));

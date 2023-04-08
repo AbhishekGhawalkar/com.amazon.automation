@@ -23,9 +23,6 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxDriverService;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -53,7 +50,8 @@ public class CommonUtility {
     WebDriverManager.chromedriver().setup();
     ChromeOptions o = new ChromeOptions();
     o.setCapability(ChromeOptions.CAPABILITY, o);
-//    o.addArguments("--headless");
+    o.addArguments("--incognito");
+    //    o.addArguments("--headless");
     driver = new ChromeDriver(o);
     driver.manage().window().maximize();
     waitTime(10);
@@ -120,7 +118,6 @@ public class CommonUtility {
     act.keyDown(Keys.CONTROL).sendKeys("v").build().perform();
     act.keyUp(Keys.CONTROL).build().perform();
   }
-
 
   public void transferControlToWindow(int index, boolean closeWindow) {
     Set<String> AllHandles = driver.getWindowHandles();
