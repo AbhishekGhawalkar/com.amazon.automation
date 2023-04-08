@@ -181,7 +181,7 @@ public class CommonUtility {
   }
 
   public void clickOn(String objectLocator) {
-    waitForElement(objectLocator, 30);
+    waitForElement(objectLocator, 60);
     this.webElement = findWebElement(objectLocator);
     if (findWebElement(objectLocator).isDisplayed()) {
       webElement.click();
