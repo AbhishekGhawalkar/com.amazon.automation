@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  amzauto:
+   build: .
+   ports:
+     - 5901:5901
+   volumes:
+     - docker-results:/analyticsportal-apiautomation-docker/target/surefire-reports
+volumes:
+  docker-results: 
