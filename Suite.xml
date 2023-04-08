@@ -12,7 +12,7 @@
 
 	<test thread-count="1" name="Test">
 		<classes>
-			<class name="testcases.LoginTest" />
+			<class name="testcases.TestClass" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
