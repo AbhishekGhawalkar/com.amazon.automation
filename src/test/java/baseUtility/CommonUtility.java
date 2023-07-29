@@ -51,6 +51,7 @@ public class CommonUtility {
     ChromeOptions o = new ChromeOptions();
     o.setCapability(ChromeOptions.CAPABILITY, o);
     o.addArguments("--incognito");
+    o.addArguments("--remote-allow-origins=*");
     //    o.addArguments("--headless");
     driver = new ChromeDriver(o);
     driver.manage().window().maximize();
